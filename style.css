@@ -1,0 +1,204 @@
+:root {
+  --main-padding: 25px;
+  --main-font-size: 18px;
+  --gradient: linear-gradient(to right, #c97544, #e59357, #af885c);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+}
+
+@font-face {
+  font-family: Classicisimo;
+  src: url(ClassicismoDEMO.otf);
+}
+
+.content {
+  max-width: 90vw;
+  width: 57vw;
+  min-width: 300px;
+  background-color: white;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 90vw;
+    flex-direction: column;
+  }
+}
+
+.photoFrame {
+  flex: 2;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-height: 100%;
+}
+
+.photo {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(247, 117, 42, 0.541) 100%
+  );
+}
+
+.photo:hover {
+  transform: scaleX(-1);
+}
+
+.signUpForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--gradient);
+  flex: 3;
+  position: relative;
+  background-color: white;
+}
+
+fieldset {
+  display: flex;
+  padding: 10px 15px;
+  position: relative;
+  top: 1%;
+  border-color: #e59357;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.form-grid > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-grid label {
+  display: block;
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+
+.form-grid input {
+  width: 100%;
+  max-width: 50%;
+  padding: 5px;
+  margin-left: 0;
+  border-radius: 5px;
+  border-color: white;
+  background-color: white;
+  transition: all 0.3 ease;
+}
+
+.form-grid > form {
+  display: contents;
+}
+
+.form-grid input:not(:placeholder-shown):invalid {
+  border: 3px solid red;
+  background-color: #ffeeee;
+}
+
+.form-grid input:not(:placeholder-shown):valid {
+  border: 3px solid #c97544;
+  background-color: #eeffee;
+}
+
+.form-grid input:hover {
+  outline: none;
+  border: 3px solid #c97544;
+  background-color: #eeffee;
+}
+
+.Text,
+.submit {
+  width: 75%;
+  padding-left: var(--main-padding);
+  font-size: var(--main-font-size);
+  font-weight: bold;
+}
+
+.Text {
+  position: relative;
+  top: -5%;
+}
+
+.odinFrame {
+  position: absolute;
+  width: 101%;
+  top: 50%;
+  left: 50%;
+  padding: 5px 0;
+  transform: translate(-50%, -175%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+  opacity: 0.8;
+}
+
+.odinFrame p {
+  font-size: 60px;
+  font-family: "Classicisimo";
+  color: white;
+  /* font-stretch: ultra-condensed;
+  transform: scaleY(1.5);
+  transform-origin: top; */
+}
+
+.odin {
+  width: 19%;
+}
+
+.submit button {
+  position: relative;
+  top: 100%;
+  padding: 5px 15px;
+  background-color: sandybrown;
+  border-radius: 5px;
+}
+
+.login {
+  position: relative;
+  top: 200%;
+  padding: 5px var(--main-padding);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.login a {
+  font-size: 15px;
+  text-decoration: green wavy underline;
+  color: black;
+}
+
+.login a:hover {
+  color: green;
+}
