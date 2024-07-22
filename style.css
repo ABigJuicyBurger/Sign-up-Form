@@ -21,7 +21,6 @@ body {
 }
 
 .content {
-  max-width: 90vw;
   width: 57vw;
   min-width: 300px;
   background-color: white;
@@ -30,12 +29,16 @@ body {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  transform-origin: top;
 }
 
 @media (max-width: 768px) {
   .content {
-    width: 90vw;
     flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -201,4 +204,14 @@ fieldset {
 
 .login a:hover {
   color: green;
+}
+
+/* Chrome Only */
+.chrome embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
