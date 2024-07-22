@@ -178,6 +178,7 @@ fieldset {
 
 .odin {
   width: 19%;
+  position: relative;
 }
 
 .submit button {
