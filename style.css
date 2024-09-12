@@ -11,7 +11,6 @@
 }
 
 body {
-  height: 100vh;
   background-color: black;
 }
 
@@ -25,10 +24,9 @@ body {
   min-width: 300px;
   background-color: white;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
-  overflow: hidden;
   transform-origin: top;
 }
 
@@ -45,7 +43,6 @@ body {
 .photoFrame {
   flex: 2;
   position: relative;
-  aspect-ratio: 16 / 9;
   max-height: 100%;
 }
 
@@ -92,7 +89,6 @@ fieldset {
   display: grid;
   grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr);
   gap: 20px;
-  width: 100%;
   padding: 5px 20px;
 }
 
@@ -148,6 +144,7 @@ fieldset {
 }
 
 .Text {
+  margin-top: 10px;
   position: relative;
   top: -5%;
 }
@@ -187,6 +184,7 @@ fieldset {
   padding: 5px 15px;
   background-color: sandybrown;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 .login {
@@ -214,5 +212,4 @@ fieldset {
   left: 0;
   width: 0;
   height: 0;
-  overflow: hidden;
 }
