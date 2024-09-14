@@ -218,9 +218,10 @@ fieldset {
 }
 
 @media (max-width: 768px) {
-  :root {
-    --main-padding: 40px;
-    --main-font-size: 18px;
+  .Text,
+  .submit,
+  .login {
+    padding-left: 40px;
   }
 
   .content {
