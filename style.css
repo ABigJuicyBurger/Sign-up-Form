@@ -87,9 +87,11 @@ fieldset {
 
 .form-grid {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr);
+  grid-template-columns: minmax(125px, 1fr) minmax(125px, 1fr);
   gap: 20px;
   padding: 5px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-grid > div {
@@ -113,6 +115,7 @@ fieldset {
   border-color: white;
   background-color: white;
   transition: all 0.3 ease;
+  box-sizing: border-box;
 }
 
 .form-grid > form {
@@ -212,4 +215,19 @@ fieldset {
   left: 0;
   width: 0;
   height: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .form-grid {
+    gap: 0px;
+    padding: 5px 0 5px 40px;
+  }
+
+  .form-grid > div {
+    width: 100%;
+  }
 }
