@@ -218,8 +218,17 @@ fieldset {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --main-padding: 40px;
+    --main-font-size: 18px;
+  }
+
   .content {
     flex-direction: column;
+  }
+
+  .Text {
+    margin-bottom: 10px;
   }
 
   .form-grid {
